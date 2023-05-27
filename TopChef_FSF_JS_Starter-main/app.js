@@ -185,6 +185,9 @@ function searchIngredients(allDishes) {
 function generateCuisineDishName(allDishes) {
     alert("Combining cuisine and dish names...")
     // TODO #5: Apply the concatenatorFunction to each dish in allDishes, then log to the console the modified result
+    let fullMenuNames = dishes.map(function(ab){
+        return ab.name + '  ' + ab.cuisine
+    })
     alert("Successfully combined cuisine and dish names!  Check the console for full output.")
 }
 
@@ -198,7 +201,7 @@ function emailMessage(dishOfTheDay) {
     Thank you for subscribing to email alert messages!
     Today's Dish of the day is:
 
-    <DISH OF THE DAY HERE>
+    <BBQ Philly Pizza American Cuisine">
 
     We hope to see you in soon!
 
@@ -219,7 +222,7 @@ function textMessage(dishOfTheDay) {
     This is an automated text message alert.
     Today's Dish of the day is:
 
-    <DISH OF THE DAY HERE>
+    <Grilled Salmon & Crab Cakes Seafood Cuisine>
 
     We hope to see you in soon!
 
@@ -236,6 +239,11 @@ function generateMarketingMessage(dishOfTheDay, messageTypeCallback) {
     alert('Sending final message to all 389 customers...')
     // TODO #7: Call the passed-in callback function on the dishOfTheDay.  Save the result as a variable
     // Then, log that result to the console
+    let bringItBack = messageTypeCallback(dishOfTheDay);
+        prompt("Here is the special for the day");
+        todaySpecial = baconChiliCheeseFries
+        return todaySpecial
+    
     alert('Success!  Check the console for a copy of the final marketing message!')
 }
 
