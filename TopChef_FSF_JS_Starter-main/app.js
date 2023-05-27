@@ -245,6 +245,7 @@ function generateMarketingMessage(dishOfTheDay, messageTypeCallback) {
         return todaySpecial
     
     alert('Success!  Check the console for a copy of the final marketing message!')
+    return bringItBack
 }
 
 // <<<<<<<<<<<<<<<<< CUSTOM PROMPT FUNCTION <<<<<<<<<<<<<<<<<
@@ -294,10 +295,25 @@ function runApp(allDishes, specialDish) {
         case "6":
             // TODO #8: Call the appropriate function to generate the marketing text message.  
             // You will need to provide today's dish and the appropriate callback function as arguments!
+            function generateTextMarketingMessage(dishOfTheDay, messageTypeCallback){
+                let textMarketingSpecial = messageTypeCallback(dishOfTheDay);
+                prompt("Here is the special for today");
+                let textMessageSpecial = "ShrimpStirFry"
+                return textMarketingSpecial
+
+            }
+                return textMarketingSpecial
             break
         case "7":
             // TODO #9: Call the appropriate function to generate the marketing email message.  
             // You will need to provide today's dish and the appropriate callback function as arguments!
+            function generateEmailMarketingMessage(dishOfTheDay, messageTypeCallback){
+                let emailMarketingSpecial = messageTypeCallback(dishOfTheDay);
+                prompt('Here is what\s hot on the menu for today');
+                let emailMessageSpecial = 'Steak and Beef Burritos'
+                return emailMarketingSpecial
+            }
+            
             break
         case "Exit":
             alert("Thank you for using the Recipe Searching Application!  Goodbye!")
