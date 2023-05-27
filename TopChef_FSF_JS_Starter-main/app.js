@@ -172,7 +172,14 @@ function searchCuisines(allDishes) {
 function searchIngredients(allDishes) {
     alert("Searching for dishes by ingredient...")
     // TODO #4: Gather user input for an ingredient to search for, then filter for all dishes that INCLUDE this ingredient in their ingredients array property
+    let userSeasoningSearch = prompt('Type ingredient to search for');
+    let ingredientResult = array.filter(function(ab){
+        if (ab.includes(ingredientResult)){
+            return true;
+        }
+    })
     alert("Found all dishes that contain the ingredient search term!  Check the console for full output")
+    return ingredientResult
 }
 
 function generateCuisineDishName(allDishes) {
